@@ -28,7 +28,7 @@ class Post < ActiveRecord::Base
   end
 
  def generate_slug!
-   self.slug = self.title.gsub(" ", "-").downcase
+  self.slug = self.title.gsub(" ", "-").downcase
  end
 
 end
