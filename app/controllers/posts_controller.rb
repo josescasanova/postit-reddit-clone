@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.creator = current_user 
-
+    #binding.pry
     if @post.save
       flash[:notice] = "Your post was created."
       redirect_to posts_path
@@ -61,6 +61,6 @@ class PostsController < ApplicationController
   end
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = Post.find_by slug: params[:id]
   end
 end
