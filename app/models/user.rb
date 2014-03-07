@@ -25,8 +25,8 @@ class User < ActiveRecord::Base
   end
 
   def send_pin_to_twilio
-    account_sid = 'Acct id' # took out for security reasons
-    auth_token = '[AuthToken]' # took out for security reasons
+    account_sid = 'AC9bbf5c9e5b50baa997754c69269e8dd3' 
+    auth_token = 'a7f29bca3324651203474912f1b5fa9d'
 
     client = Twilio::REST::Client.new account_sid, auth_token 
     binding.pry
