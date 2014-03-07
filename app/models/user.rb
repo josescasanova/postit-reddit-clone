@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
 
   def send_pin_to_twilio
     account_sid = 'AC9bbf5c9e5b50baa997754c69269e8dd3' 
-    auth_token = 'a7f29bca3324651203474912f1b5fa9d'
+    auth_token = '[AuthToken]' # killed previous auth token and created a new one
 
     client = Twilio::REST::Client.new account_sid, auth_token 
     binding.pry
